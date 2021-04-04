@@ -22,7 +22,7 @@ class UsersSeeder extends Seeder
             'username' => 'creativeH',
             'email' => 'henimastic@gmail.com',
             'hash' => str_random(15),
-            'password' => $password ?: $password = bcrypt('password'),
+            'password' => bcrypt('password'),
             'remember_token' => str_random(10),
             'confirmed' => true
         ]);
@@ -57,7 +57,6 @@ class UsersSeeder extends Seeder
         
         
         // User::truncate();
-
         // collect([
         //     [
         //         'first_name' => 'Henry',
