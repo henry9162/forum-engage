@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAC;EACJ,MAAM,CAAN,WAAM;CAKT;;AAND,AAGI,OAHG,GAGD,eAAe,CAAC;EACd,MAAM,CAAN,8DAAM;CACT",
+    "sources": [
+        "widget.scss"
+    ],
+    "names": [],
+    "file": "widget.css"
+}

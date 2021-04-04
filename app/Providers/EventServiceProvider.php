@@ -1,0 +1,40 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
+
+class EventServiceProvider extends ServiceProvider
+{
+    /**
+     * The event listener mappings for the application.
+     *
+     * @var array
+     */
+    protected $listen = [
+        \App\Events\ThreadReceivedNewReply::class => [
+            \App\Listeners\NotifyMentionedUsers::class,
+            \App\Listeners\NotifySubscribers::class
+        ],
+
+        \App\Events\ThreadWasPublished::class => [
+            \App\Listeners\NotifyMentionedUsers::class
+        ],
+
+        \App\Events\MessageWasRecieved::class => [
+            \App\Listeners\NotifyMessageRecipient::class
+        ],
+    ];
+
+    /**
+     * Register any events for your application.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        parent::boot();
+
+        //
+    }
+}
